@@ -1,0 +1,52 @@
+.side-bar {
+    -fx-background-color: #D5D6F2;
+}
+.sidebar-btn {
+    -fx-background-color: transparent;
+}
+.sidebar-btn-ico {
+    -fx-fill: grey;
+}
+.sidebar-btn-text {
+    -fx-text-fill: grey;
+}
+.sidebar-btn:hover {
+    -fx-border-width: 0px 0px 0px 3px;
+    -fx-border-color: #2BBCF5;
+    -fx-border-style: solid;
+}
+.sidebar-btn:hover .sidebar-btn-ico {
+    -fx-fill: #2BBCF5;
+}
+.sidebar-btn:hover .sidebar-btn-text {
+    -fx-text-fill: #2BBCF5;
+}
+.childpan {
+    -fx-background-color: #F9F8FD;
+}
+.search-ico {
+    -fx-border-color: #D5D6F2;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+.noit-icon {
+    -fx-background-color: indianred;
+    -fx-background-radius: 100%;
+}
+.txtField {
+    -fx-background-radius: 20px;
+}
+.txtField_from {
+    -fx-background-color: white;
+    -fx-border-color: grey;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+.txtField_to {
+    -fx-background-color: lightskyblue;
+    -fx-border-color: grey;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+.login-btn {
+    -fx-background-color: #D5D6F2;
+}

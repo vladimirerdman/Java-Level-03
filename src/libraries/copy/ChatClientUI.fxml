@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane"
+            stylesheets="@style.css"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="UIController"
+            prefHeight="580.0"
+            prefWidth="758.0">
+   <children>
+      <Pane prefHeight="580.0" prefWidth="200.0" styleClass="side-bar">
+         <children>
+            <ImageView fx:id="placeholder" fitHeight="64.0" fitWidth="65.0" layoutX="68.0" layoutY="37.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/user01.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="8.0" layoutY="103.0" prefHeight="17.0" prefWidth="185.0" text="Vladimir Putin" textAlignment="CENTER" textFill="#404040">
+               <font>
+                  <Font name="Apple Braille" size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="178.0">
+               <children>
+                  <FontAwesomeIcon fill="#8b8c9e" iconName="HOME" layoutX="14.0" layoutY="206.0" size=" 1.3em">
+                     <HBox.margin>
+                        <Insets left="5.0" right="8.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label layoutX="36.0" layoutY="188.0" prefHeight="27.0" prefWidth="145.0" text="PROFILE" textAlignment="CENTER" textFill="#7b798a">
+                     <font>
+                        <Font name="Al Nile Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="217.0">
+               <children>
+                  <FontAwesomeIcon fill="#8b8c9e" iconName="ENVELOPE" layoutX="14.0" layoutY="206.0">
+                     <HBox.margin>
+                        <Insets left="5.0" right="8.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label layoutX="36.0" layoutY="188.0" prefHeight="27.0" prefWidth="145.0" text="CHAT" textAlignment="CENTER" textFill="#7b798a">
+                     <font>
+                        <Font name="Al Nile Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="257.0">
+               <children>
+                  <FontAwesomeIcon fill="#8b8c9e" iconName="GEAR" layoutX="14.0" layoutY="206.0" size="1.3em">
+                     <HBox.margin>
+                        <Insets left="5.0" right="8.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <Label layoutX="36.0" layoutY="188.0" prefHeight="27.0" prefWidth="145.0" text="SETTINGS" textAlignment="CENTER" textFill="#7b798a">
+                     <font>
+                        <Font name="Al Nile Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutX="200.0" prefHeight="580.0" prefWidth="280.0" styleClass="childpan">
+         <children>
+            <Label alignment="TOP_LEFT" layoutX="29.0" layoutY="53.0" prefHeight="17.0" prefWidth="185.0" text="User List" textAlignment="CENTER" textFill="#404040">
+               <font>
+                  <Font name="Apple Braille" size="16.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="29.0" layoutY="96.0" prefHeight="27.0" prefWidth="223.0" styleClass="search-ico">
+               <children>
+                  <FontAwesomeIcon fill="#b3b3b9" iconName="SEARCH" layoutX="28.0" layoutY="112.0" size=" 1.3em" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+                  <TextField layoutX="48.0" layoutY="93.0" prefHeight="27.0" prefWidth="185.0" promptText="Search" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Apple Braille" size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Pane layoutX="30.0" layoutY="143.0" prefHeight="71.0" prefWidth="223.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="placeholder1" fitHeight="64.0" fitWidth="65.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/user05.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="77.0" layoutY="17.0" prefHeight="27.0" prefWidth="132.0" text="Sergey Lavrov" textAlignment="CENTER" textFill="#5e5e5e">
+                     <font>
+                        <Font name="Apple Braille Outline 6 Dot" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="31.0" prefHeight="27.0" prefWidth="132.0" text="Working remote" textAlignment="CENTER" textFill="#979696">
+                     <font>
+                        <Font name="Apple Braille" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="185.0" layoutY="-1.0" prefHeight="27.0" prefWidth="38.0" text="23 Feb" textAlignment="CENTER" textFill="#979696">
+                     <font>
+                        <Font name="Apple Braille" size="10.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane layoutX="197.0" layoutY="30.0" prefHeight="15.0" prefWidth="15.0" styleClass="noit-icon">
+                     <children>
+                        <Label layoutX="5.0" layoutY="2.0" text="1" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#e1e1e1" />
+               </effect>
+            </Pane>
+            <Pane layoutX="30.0" layoutY="223.0" prefHeight="71.0" prefWidth="223.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="placeholder11" fitHeight="64.0" fitWidth="65.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/user02.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="77.0" layoutY="17.0" prefHeight="27.0" prefWidth="132.0" text="Donald Trump" textAlignment="CENTER" textFill="#5e5e5e">
+                     <font>
+                        <Font name="Apple Braille Outline 6 Dot" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="31.0" prefHeight="27.0" prefWidth="132.0" text="Working remote" textAlignment="CENTER" textFill="#979696">
+                     <font>
+                        <Font name="Apple Braille" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="185.0" layoutY="-1.0" prefHeight="27.0" prefWidth="38.0" text="23 Feb" textAlignment="CENTER" textFill="#979696">
+                     <font>
+                        <Font name="Apple Braille" size="10.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane layoutX="197.0" layoutY="30.0" prefHeight="15.0" prefWidth="15.0" styleClass="noit-icon">
+                     <children>
+                        <Label layoutX="5.0" layoutY="2.0" text="5" textFill="WHITE">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#e1e1e1" />
+               </effect>
+            </Pane>
+            <Pane layoutX="30.0" layoutY="303.0" prefHeight="71.0" prefWidth="223.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="placeholder12" fitHeight="64.0" fitWidth="65.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/user03.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="77.0" layoutY="17.0" prefHeight="27.0" prefWidth="132.0" text="Barack Obama" textAlignment="CENTER" textFill="#5e5e5e">
+                     <font>
+                        <Font name="Apple Braille Outline 6 Dot" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="31.0" prefHeight="27.0" prefWidth="132.0" text="Working remote" textAlignment="CENTER" textFill="#979696">
+                     <font>
+                        <Font name="Apple Braille" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="185.0" layoutY="-1.0" prefHeight="27.0" prefWidth="38.0" text="23 Feb" textAlignment="CENTER" textFill="#979696">
+                     <font>
+                        <Font name="Apple Braille" size="10.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#e1e1e1" />
+               </effect>
+            </Pane>
+            <Pane layoutX="30.0" layoutY="383.0" prefHeight="71.0" prefWidth="223.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="placeholder111" fitHeight="64.0" fitWidth="65.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user04.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="77.0" layoutY="17.0" prefHeight="27.0" prefWidth="132.0" text="Vladimir Zhirinovsky" textAlignment="CENTER" textFill="#5e5e5e">
+                     <font>
+                        <Font name="Apple Braille Outline 6 Dot" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="31.0" prefHeight="27.0" prefWidth="132.0" text="Working remote" textAlignment="CENTER" textFill="#979696">
+                     <font>
+                        <Font name="Apple Braille" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="185.0" layoutY="-1.0" prefHeight="27.0" prefWidth="38.0" text="23 Feb" textAlignment="CENTER" textFill="#979696">
+                     <font>
+                        <Font name="Apple Braille" size="10.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#e1e1e1" />
+               </effect>
+            </Pane>
+            <Pane layoutX="30.0" layoutY="463.0" prefHeight="71.0" prefWidth="223.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="placeholder121" fitHeight="64.0" fitWidth="65.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/user06.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="77.0" layoutY="17.0" prefHeight="27.0" prefWidth="132.0" text="Vladimir Zelensky" textAlignment="CENTER" textFill="#5e5e5e">
+                     <font>
+                        <Font name="Apple Braille Outline 6 Dot" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="31.0" prefHeight="27.0" prefWidth="132.0" text="Working remote" textAlignment="CENTER" textFill="#979696">
+                     <font>
+                        <Font name="Apple Braille" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="185.0" layoutY="-1.0" prefHeight="27.0" prefWidth="38.0" text="23 Feb" textAlignment="CENTER" textFill="#979696">
+                     <font>
+                        <Font name="Apple Braille" size="10.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#e1e1e1" />
+               </effect>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="480.0" prefHeight="580.0" prefWidth="281.0" style="-fx-background-color: white;">
+         <children>
+            <FontAwesomeIcon fill="#dfdfe4" iconName="BELL" layoutX="245.0" layoutY="32.0" size=" 1.3em" textAlignment="CENTER" />
+            <Label layoutX="161.0" layoutY="12.0" prefHeight="27.0" prefWidth="82.0" text="Status Sale" textAlignment="CENTER" textFill="#5e5e5e">
+               <font>
+                  <Font name="Apple Braille Outline 6 Dot" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="placeholder122" fitHeight="44.0" fitWidth="44.0" layoutX="14.0" layoutY="81.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/user03.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="65.0" layoutY="90.0" prefHeight="35.0" prefWidth="196.0" styleClass="search-ico">
+               <children>
+                  <Label alignment="TOP_LEFT" layoutX="510.0" layoutY="86.0" prefHeight="20.0" prefWidth="136.0" text="Barack Obama" textAlignment="CENTER" textFill="#404040">
+                     <font>
+                        <Font name="Apple Braille" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="510.0" layoutY="102.0" prefHeight="1.0" prefWidth="155.0" text="last seen yesteerday at 11:08 AM" textAlignment="CENTER" textFill="#979696">
+                     <font>
+                        <Font name="Apple Braille" size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Pane layoutX="14.0" layoutY="142.0">
+               <children>
+                  <TextField alignment="TOP_LEFT" prefHeight="35.0" prefWidth="185.0" styleClass="txtField_from" text="Hi! How are you doing?" />
+                  <Label layoutX="137.0" layoutY="20.0" prefHeight="13.0" prefWidth="38.0" text="7:34 PM" textAlignment="CENTER" textFill="#979696">
+                     <font>
+                        <Font name="Apple Braille" size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="47.0" layoutY="183.0">
+               <children>
+                  <TextField alignment="TOP_LEFT" prefHeight="35.0" prefWidth="214.0" styleClass="txtField_to" text="Hi! Better than you, thanks!" />
+                  <Label layoutX="160.0" layoutY="20.0" prefHeight="13.0" prefWidth="38.0" text="7:38 PM" textAlignment="CENTER" textFill="#686868">
+                     <font>
+                        <Font name="Apple Braille" size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <TextField alignment="CENTER" layoutX="15.0" layoutY="420.0" prefHeight="35.0" prefWidth="82.0" styleClass="txtField_from" text="Welcome!">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#c3c3c3" />
+               </effect>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="107.0" layoutY="420.0" prefHeight="35.0" prefWidth="57.0" styleClass="txtField_from" text="Hi!">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#c3c3c3" />
+               </effect>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="180.0" layoutY="420.0" prefHeight="35.0" prefWidth="82.0" styleClass="txtField_from" text="Hello there.">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#c3c3c3" />
+               </effect>
+            </TextField>
+            <HBox alignment="CENTER_LEFT" layoutX="11.0" layoutY="462.0" prefHeight="71.0" prefWidth="254.0" style="-fx-border-color: gray; -fx-border-radius: 20;">
+               <children>
+                  <TextField prefHeight="75.0" prefWidth="215.0" promptText="Type Message" style="-fx-background-color: white; -fx-background-radius: 20;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+                  <FontAwesomeIcon fill="#b3b6e1" iconName="SEND" size=" 1.3em" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="7.0" right="5.0" top="7.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+               </children>
+               <opaqueInsets>
+                  <Insets left="20.0" top="20.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="1.0" top="1.0" />
+               </padding>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="580.0" prefWidth="800.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iChat.ClientController">
+         <children>
+            <Pane prefHeight="580.0" prefWidth="200.0" styleClass="chatPaneLeft">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="68.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/user01.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="102.0" prefHeight="20.0" prefWidth="180.0" text="Vladimir Putin" textFill="#616161">
+               <font>
+                  <Font name="Apple Braille" size="13.0" />
+               </font>
+            </Label>
+         </children></Pane>
+            <Pane layoutX="200.0" prefHeight="580.0" prefWidth="300.0" styleClass="chatPaneCenter">
+               <children>
+                      <ListView fx:id="clientsList" focusTraversable="false" layoutX="15.0" layoutY="70.0" minWidth="140.0" prefHeight="494.0" prefWidth="280.0" />
+            <Label layoutX="15.0" layoutY="36.0" text="User List" textFill="#616161">
+               <font>
+                  <Font name="Apple Braille" size="16.0" />
+               </font>
+            </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="500.0" prefHeight="580.0" prefWidth="300.0" styleClass="chatPaneRight">
+               <children>
+                      <TextArea fx:id="messages" editable="false" focusTraversable="false" layoutX="10.0" layoutY="70.0" minHeight="154.0" minWidth="196.0" prefHeight="418.0" prefWidth="280.0" wrapText="true">
+                          <font>
+                              <Font size="14.0" />
+                          </font>
+                      </TextArea>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="501.0" prefHeight="65.0" prefWidth="280.0" styleClass="chatMessageBlock">
+               <children>
+                            <TextField fx:id="messageArea" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#sendMessage" prefHeight="77.0" prefWidth="236.0" promptText="Type Message" styleClass="chatMessageTextField">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </TextField>
+                            <Button fx:id="buttonSendMessage" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#sendMessage" prefHeight="40.0" prefWidth="34.0" styleClass="chatSendBtn" stylesheets="@style.css">
+                                <font>
+                                    <Font name="Gadugi" size="14.0" />
+                                </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="#b2b2b2" iconName="SEND" size="1.3em" />
+                     </graphic>
+                            </Button>
+               </children>
+            </HBox>
+            <Label layoutX="10.0" layoutY="36.0" text="Chat" textFill="#616161">
+               <font>
+                  <Font name="Apple Braille" size="16.0" />
+               </font>
+            </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>

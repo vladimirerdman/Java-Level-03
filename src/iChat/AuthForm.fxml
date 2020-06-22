@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iChat.AuthorizationController">
+    <children>
+      <Pane prefHeight="500.0" prefWidth="292.0" styleClass="authPaneLeft">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="99.0" layoutY="200.0">
+               <children>
+                  <FontAwesomeIcon fill="#909090" iconName="USER" layoutX="126.0" layoutY="218.0" size="4em" />
+                      <Label layoutX="99.0" layoutY="226.0" text="iChat" textFill="#909090">
+                          <font>
+                              <Font name="Apple Braille" size="40.0" />
+                          </font>
+                      </Label>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane layoutX="292.0" prefHeight="500.0" prefWidth="308.0" styleClass="authPaneRight">
+         <children>
+                <Button fx:id="cancelBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="261.0" layoutY="8.0" minHeight="29.0" minWidth="41.0" mnemonicParsing="false" onAction="#cancel" prefHeight="37.0" prefWidth="41.0" textFill="#616161">
+               <graphic>
+                  <FontAwesomeIcon fill="#909090" iconName="CLOSE" size="1.5em" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="cancelBtn" />
+                  <String fx:value="btnHover" />
+               </styleClass></Button>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="79.0" text="Sign In" textFill="#616161">
+                    <font>
+                        <Font name="Apple Braille" size="24.0" />
+                    </font>
+                </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="47.0" layoutY="196.0" styleClass="mainInputStyle">
+               <children>
+                  <FontAwesomeIcon fill="#909090" iconName="USER" layoutX="47.0" layoutY="190.0" size="1.3em" />
+                        <TextField fx:id="username" layoutX="68.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="200.0" promptText="Username" style="-fx-background-color: transparent;" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="47.0" layoutY="241.0" styleClass="mainInputStyle">
+               <children>
+                  <FontAwesomeIcon fill="#909090" iconName="KEY" layoutX="47.0" layoutY="234.0" size="1.1em" />
+                        <PasswordField fx:id="password" layoutX="69.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#login" prefWidth="200.0" promptText="Password" style="-fx-background-color: transparent;" />
+               </children>
+            </HBox>
+                <Button fx:id="loginBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="114.0" layoutY="294.0" minHeight="29.0" minWidth="80.0" mnemonicParsing="false" onAction="#login" prefHeight="29.0" prefWidth="80.0" text="Login" textFill="#616161">
+               <styleClass>
+                  <String fx:value="loginBtn" />
+                  <String fx:value="btnHover" />
+               </styleClass></Button>
+                <Label fx:id="authError" alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="418.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="37.0" prefWidth="214.0" styleClass="labelError" textAlignment="CENTER" visible="false" wrapText="true" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+/**
+AuthForm UI
+ */
+.authPaneLeft {
+    -fx-background-color: #f3f3f3;
+}
+.authPaneRight {
+    -fx-background-color: #ffffff;
+}
+.mainInputStyle {
+    -fx-border-color: #f3f3f3;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+.labelError {
+    -fx-background-color: #ffc9bd;
+}
+.loginBtn {
+    -fx-background-color: #f3f3f3;
+}
+.btnHover:hover {
+    -fx-cursor: hand;
+}
+.cancelBtn {
+    -fx-background-color: transparent;
+}
+
+/**
+Chat UI
+ */
+.chatPaneLeft {
+    -fx-background-color: #f3f3f3;
+}
+.chatPaneCenter {
+    -fx-background-color: #ffffff;
+}
+.chatPaneRight {
+    -fx-background-color: #ffffff;
+}
+.chatSendBtn {
+    -fx-background-color: transparent;
+}
+.chatMessageBlock {
+    -fx-border-color: #c4c4c4;
+    -fx-border-radius: 20;
+}
+.chatMessageTextField {
+    -fx-background-color: transparent;
+    -fx-background-radius: 20;
+}
+
+/*
+#buttonSendMessage.button {
+    -fx-content-display: RIGHT;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, #858585, 5, 0.0, 0, 1);
+}
+#buttonSendMessage.button:hover {
+    -fx-background-color: #0dc60a;
+}
+ */

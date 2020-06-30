@@ -41,6 +41,17 @@ public class AuthorizationServer {
         }
     }
 
+    public boolean changeNickname(String username, String nickname) {
+        try {
+            PreparedStatement statement = connectionToDb.prepareStatement("UPDATE users SET nickname = '" + nickname + "' WHERE username = '" + username + "';");
+            int result = statement.executeUpdate();
+            return result > 0;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
+    }
+
     public String getNickByLoginAndPwd(String username, String password) {
         try {
             PreparedStatement statement = connectionToDb.prepareStatement("SELECT nickname FROM users WHERE username = '" + username + "' AND password = '" + password + "';");

@@ -58,6 +58,10 @@ public class Server {
         }
     }
 
+    public synchronized void updateNick(String previousNick, String nickname) {
+        broadcast("/update " + previousNick + " " + nickname);
+    }
+
     public synchronized void sendPrivateMessage(String fromUser, String nick, String message) {
         if (isNickLogged(nick)) {
             for (ClientHandler client : clients) {

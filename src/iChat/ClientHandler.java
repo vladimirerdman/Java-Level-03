@@ -8,6 +8,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class ClientHandler {
     private final Server server;
@@ -91,7 +93,7 @@ public class ClientHandler {
                     }
 
                 } else {
-                    server.broadcast(getCurrentTime() + " " + nickname + ": " + message);
+                    server.broadcast(getCurrentTime() + " " + nickname + ": " + censor(message));
                 }
             }
         }
@@ -139,6 +141,25 @@ public class ClientHandler {
                 break;
             }
         }
+    }
+
+    Cens censored = new Cens();
+    private final TreeMap<String, String> censWords = (TreeMap<String, String>) censored.getCens();
+
+    public String censor(String msg) {
+        String[] temp = msg.split("(?<=\\b|[^\\p{L}])", 0);
+        for (int i = 0; i < temp.length; i++) {
+            for (Map.Entry<String, String> word : censWords.entrySet()) {
+                if (temp[i].toLowerCase().equals(word.getKey())) {
+                    temp[i] = word.getValue();
+                }
+            }
+        }
+        StringBuilder stringBuilder = new StringBuilder();
+        for (String s : temp) {
+            stringBuilder.append(s);
+        }
+        return stringBuilder.toString();
     }
 
     public void sendMessage(String msg) {

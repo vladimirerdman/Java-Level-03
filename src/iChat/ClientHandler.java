@@ -21,6 +21,11 @@ public class ClientHandler {
         return nickname;
     }
 
+    public void changeNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+
     public ClientHandler(Server server, Socket socket) {
         this.server = server;
         this.socket = socket;
@@ -73,6 +78,16 @@ public class ClientHandler {
                     } else if (message.equals("/end")) {
                         closeConnection();
                         return;
+                    } else if (message.startsWith("/changenick")) {
+                        // /changenick newNickname
+                        String previousNick = nickname;
+                        if (server.getAuthService().changeNickname(login, tmp[1])) {
+                            changeNickname(tmp[1]);
+                            server.updateNick(previousNick, tmp[1]);
+                            server.broadcast(previousNick + " change nickname to " + tmp[1]);
+                        } else {
+                            sendMessage("Server: failed to change nickname");
+                        }
                     }
 
                 } else {

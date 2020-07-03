@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-07-03T17:52:08.515592300Z</date>
+  <millis>1593798728515</millis>
+  <nanos>592300</nanos>
+  <sequence>1</sequence>
+  <logger>ru.geekbrains.lesson6.logging.ExampleZero</logger>
+  <level>CONFIG</level>
+  <class>ru.geekbrains.lesson6.logging.ExampleZero</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Java 123</message>
+</record>
+<record>
+  <date>2020-07-03T17:52:08.529555300Z</date>
+  <millis>1593798728529</millis>
+  <nanos>555300</nanos>
+  <sequence>3</sequence>
+  <logger>ru.geekbrains.lesson6.logging.ExampleZero</logger>
+  <level>CONFIG</level>
+  <class>ru.geekbrains.lesson6.logging.ExampleZero</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Java 123</message>
+</record>
+</log>

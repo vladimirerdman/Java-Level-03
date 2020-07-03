@@ -1,0 +1,6 @@
+апр. 09, 2020 8:49:44 PM ru.geekbrains.lesson6.logging.Example2Handlers tryToDivBy0
+SEVERE: Ошибка деления на ноль
+java.lang.ArithmeticException: / by zero
+	at ru.geekbrains.lesson6.logging.Example2Handlers.tryToDivBy0(Example2Handlers.java:35)
+	at ru.geekbrains.lesson6.logging.Example2Handlers.main(Example2Handlers.java:30)
+

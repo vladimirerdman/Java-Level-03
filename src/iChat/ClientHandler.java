@@ -18,6 +18,7 @@ public class ClientHandler {
     private final DataOutputStream dataOutputStream;
     private String nickname;
     private String login;
+    MainLogger log = new MainLogger();
 
     public String getNickname() {
         return nickname;
@@ -48,7 +49,7 @@ public class ClientHandler {
         }
     }
 
-    private void closeConnection() {
+    private void closeConnection() throws IOException {
         try {
             dataInputStream.close();
             dataOutputStream.close();
@@ -58,7 +59,8 @@ public class ClientHandler {
         }
         server.unsubscribe(this);
         server.broadcast("User  " + nickname + " leave chat.");
-        System.out.println(nickname + " disconnected from server.");
+        //System.out.println(nickname + " disconnected from server.");
+        log.setLogMessage(nickname + " disconnected from server.");
     }
 
     private void readMessages() throws IOException {
@@ -117,7 +119,8 @@ public class ClientHandler {
                         String nick = server.getAuthService().getNickByLoginAndPwd(parts[1], parts[2]);
                         if (nick != null) {
                             if (!server.isNickLogged(nick)) {
-                                System.out.println(nick + " logged into chat");
+                                //System.out.println(nick + " logged into chat");
+                                log.setLogMessage(nick + " logged into chat");
                                 nickname = nick;
                                 login = parts[1];
                                 sendMessage("/auth OK");
@@ -136,7 +139,8 @@ public class ClientHandler {
                 }
             } else {
                 sendMessage("/end");
-                System.out.println("The client was disconnected for inaction (More than 120 seconds passed)");
+                //System.out.println("The client was disconnected for inaction (More than 120 seconds passed)");
+                log.setLogMessage("The client was disconnected for inaction (More than 120 seconds passed)");
                 socket.close();
                 break;
             }

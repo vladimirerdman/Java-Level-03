@@ -1,5 +1,7 @@
 package iChat;
 
+import java.io.IOException;
+
 public class ServerApp {
     private static Server server;
 
@@ -7,7 +9,7 @@ public class ServerApp {
         return server;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         server = new Server();
     }
 }

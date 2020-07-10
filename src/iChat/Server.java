@@ -11,10 +11,9 @@ public class Server {
     private  List<ClientHandler> clients;
     private AuthorizationServer authorizationServer;
     private ServerSocket server = null;
+    MainLogger log = new MainLogger();
 
-    public AuthorizationServer getAuthService() {
-        return authorizationServer;
-    }
+    public AuthorizationServer getAuthService() { return authorizationServer; }
 
     public synchronized void broadcastsClients(String command) {
         StringBuilder clientsList = new StringBuilder(command);
@@ -24,7 +23,7 @@ public class Server {
         broadcast(clientsList.toString());
     }
 
-    Server() {
+    Server() throws IOException {
         try (ServerSocket server = new ServerSocket(PORT)) {
             this.server = server;
             authorizationServer = new AuthorizationServer();
@@ -36,7 +35,8 @@ public class Server {
                 new ClientHandler(this, socket);
             }
         } catch (IOException ex) {
-            System.out.println("Server error");
+            //System.out.println("Server error");
+            log.setLogMessage("Server error");
         } finally {
             stopServer();
         }
@@ -94,6 +94,7 @@ public class Server {
     private void stopServer() {
         try {
             broadcast("/end");
+            log.setLogMessage("Server stopped");
             authorizationServer.closeConnection();
             server.close();
         } catch (IOException e) {
